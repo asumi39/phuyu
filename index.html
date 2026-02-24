@@ -1,1 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phuyu Cloud | Routing...</title>
+    <link rel="stylesheet" href="src/style.css">
+    <script>
+        // 智能識別瀏覽器語言並跳轉
+        document.addEventListener("DOMContentLoaded", function() {
+            const userLang = navigator.language || navigator.userLanguage;
+            const lowerLang = userLang.toLowerCase();
 
+            if (lowerLang.includes('zh-tw') || lowerLang.includes('zh-hk')) {
+                window.location.replace('/zh-tw/');
+            } else if (lowerLang.includes('zh')) {
+                window.location.replace('/zh-cn/');
+            } else if (lowerLang.includes('ja')) {
+                window.location.replace('/ja/');
+            } else {
+                window.location.replace('/en/');
+            }
+        });
+    </script>
+</head>
+<body class="redirect-body">
+    <div class="redirect-container">
+        <h1>☁️ Phuyu Cloud</h1>
+        <p>Redirecting to your language...</p>
+        <div class="manual-links">
+            <a href="/en/">English</a> | 
+            <a href="/ja/">日本語</a> | 
+            <a href="/zh-tw/">繁體中文</a> | 
+            <a href="/zh-cn/">简体中文</a>
+        </div>
+    </div>
+</body>
+</html>
