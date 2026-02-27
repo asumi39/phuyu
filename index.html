@@ -5,23 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phuyu Cloud | Routing...</title>
     <link rel="stylesheet" href="src/style.css">
-    <link rel="icon" type="image/svg+xml" href="../src/logo-light.svg" />
+    <link rel="icon" type="image/svg+xml" href="src/logo-light.svg" />
     <script>
-        // 智能識別瀏覽器語言並跳轉
-        document.addEventListener("DOMContentLoaded", function() {
-            const userLang = navigator.language || navigator.userLanguage;
-            const lowerLang = userLang.toLowerCase();
-
-            if (lowerLang.includes('zh-tw') || lowerLang.includes('zh-hk')) {
-                window.location.replace('/zh-tw/');
-            } else if (lowerLang.includes('zh')) {
-                window.location.replace('/zh-cn/');
-            } else if (lowerLang.includes('ja')) {
-                window.location.replace('/ja/');
+        // Dark mode initialization - must run before page render
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.classList.add('dark');
             } else {
-                window.location.replace('/en/');
+                document.documentElement.classList.remove('dark');
             }
-        });
+        })();
     </script>
 </head>
 <body class="redirect-body">
@@ -32,11 +27,32 @@
         </h1>
         <p>Redirecting to your language...</p>
         <div class="manual-links">
-            <a href="/en/">English</a> | 
-            <a href="/ja/">日本語</a> | 
-            <a href="/zh-tw/">繁體中文</a> | 
+            <a href="/en/">English</a>
+            <a href="/ja/">日本語</a>
+            <a href="/zh-tw/">繁體中文</a>
             <a href="/zh-cn/">简体中文</a>
         </div>
     </div>
+
+    <script>
+        // Smart language detection and redirect
+        document.addEventListener("DOMContentLoaded", function() {
+            const userLang = navigator.language || navigator.userLanguage;
+            const lowerLang = userLang.toLowerCase();
+
+            // Short delay to show the page briefly before redirect
+            setTimeout(function() {
+                if (lowerLang.includes('zh-tw') || lowerLang.includes('zh-hk')) {
+                    window.location.replace('/zh-tw/');
+                } else if (lowerLang.includes('zh')) {
+                    window.location.replace('/zh-cn/');
+                } else if (lowerLang.includes('ja')) {
+                    window.location.replace('/ja/');
+                } else {
+                    window.location.replace('/en/');
+                }
+            }, 800);
+        });
+    </script>
 </body>
 </html>
