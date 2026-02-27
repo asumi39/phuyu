@@ -138,6 +138,22 @@ header {
     transition: transform var(--transition-smooth);
 }
 
+.logo-icon.light {
+    display: block;
+}
+
+.logo-icon.dark {
+    display: none;
+}
+
+.dark .logo-icon.light {
+    display: none;
+}
+
+.dark .logo-icon.dark {
+    display: block;
+}
+
 .logo:hover .logo-icon {
     transform: scale(1.05);
 }
