@@ -47,6 +47,17 @@ header {
     gap: 0.5rem;
 }
 
+/* Logo icon styling */
+.logo-icon {
+    height: 1.5em; /* 與文字大小相匹配 */
+    width: auto;
+}
+
+/* Logo text styling */
+.logo-text {
+    /* 繼承父元素的字體樣式，所以不需要額外設定 */
+}
+
 /* Language Switcher */
 .lang-switcher {
     padding: 0.5rem 1rem;
