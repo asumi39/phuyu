@@ -1,22 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
-    <defs>
-        <linearGradient id="phuyuGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#0ea5e9" />
-            <stop offset="100%" stop-color="#2563eb" />
-        </linearGradient>
-        
-        <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-            <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#1d4ed8" flood-opacity="0.3"/>
-        </filter>
-    </defs>
-    
-    <path d="M 35 85 
-             A 15 15 0 0 1 35 55 
-             A 24 24 0 0 1 80 50 
-             A 17.5 17.5 0 0 1 80 85 Z" 
-          fill="url(#phuyuGrad)" filter="url(#glow)"/>
-          
-    <path d="M 58 46 Q 58 56 68 56 Q 58 56 58 66 Q 58 56 48 56 Q 58 56 58 46 Z" fill="#ffffff" />
-    
-    <path d="M 76 36 Q 76 41 81 41 Q 76 41 76 46 Q 76 41 71 41 Q 76 41 76 36 Z" fill="#ffffff" opacity="0.8" />
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="phuyu_grad_new" x1="18" y1="23" x2="119" y2="88" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#60A5FA"/> <stop offset="1" stop-color="#2563EB"/> </linearGradient>
+  </defs>
+
+  <path d="M38.5 88C27.1782 88 18 78.8218 18 67.5C18 57.3402 25.3854 48.9029 35.105 47.2435C38.223 33.3934 50.5636 23 65.5 23C76.242 23 85.6433 28.1065 91.5303 35.9869C94.4988 34.7077 97.7915 34 101.25 34C111.467 34 119.75 42.2832 119.75 52.5C119.75 53.071 119.724 53.6358 119.674 54.1939C122.955 57.1751 125 61.5034 125 66.3333C125 75.1699 117.837 82.3333 109 82.3333H38.5V88Z" fill="url(#phuyu_grad_new)"/>
+
+  <path d="M85 40L86.5 46.5L93 48L86.5 49.5L85 56L83.5 49.5L77 48L83.5 46.5L85 40Z" fill="white"/>
 </svg>
