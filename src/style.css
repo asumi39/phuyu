@@ -4,35 +4,38 @@
     --primary-color: #2563eb;
     --primary-hover: #1d4ed8;
     --primary-light: #3b82f6;
-    
+
     /* Text Colors - Zinc palette */
     --text-primary: #18181b;
     --text-secondary: #71717a;
     --text-muted: #a1a1aa;
-    
+
+    /* Icon Colors - Dark icon on light background */
+    --icon-color: #52525b;
+
     /* Background Colors */
     --bg-primary: #ffffff;
     --bg-secondary: #fafafa;
     --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-    
+
     /* Card Colors */
     --card-bg: rgba(255, 255, 255, 0.7);
     --card-border: rgba(255, 255, 255, 0.5);
-    
+
     /* Navigation */
     --nav-bg: rgba(255, 255, 255, 0.8);
     --nav-border: rgba(244, 244, 245, 1);
-    
+
     /* Shadows */
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
     --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-    
+
     /* Border Colors */
     --border-color: #e4e4e7;
     --border-hover: #d4d4d8;
-    
+
     /* Transitions */
     --transition-fast: 0.2s ease;
     --transition-normal: 0.3s ease;
@@ -44,22 +47,25 @@
     --text-primary: #f4f4f5;
     --text-secondary: #a1a1aa;
     --text-muted: #71717a;
-    
+
+    /* Icon Colors - Light icon on dark background */
+    --icon-color: #d4d4d8;
+
     --bg-primary: #09090b;
     --bg-secondary: #18181b;
     --bg-gradient: linear-gradient(135deg, #0a0a0b 0%, #0f0f11 100%);
-    
+
     --card-bg: rgba(24, 24, 27, 0.7);
     --card-border: rgba(39, 39, 42, 1);
-    
+
     --nav-bg: rgba(9, 9, 11, 0.8);
     --nav-border: rgba(39, 39, 42, 1);
-    
+
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -4px rgba(0, 0, 0, 0.4);
     --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
-    
+
     --border-color: #27272a;
     --border-hover: #3f3f46;
 }
@@ -102,6 +108,13 @@ header {
     justify-content: space-between;
     align-items: center;
     box-shadow: var(--shadow-sm);
+}
+
+/* Header controls container for lang-switcher and theme-toggle */
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
 }
 
 .logo {
@@ -447,7 +460,7 @@ a {
     border-radius: 9999px;
     border: 1px solid var(--border-color);
     background: var(--bg-primary);
-    color: var(--text-primary);
+    color: var(--icon-color);
     cursor: pointer;
     outline: none;
     transition: all var(--transition-normal);
@@ -456,7 +469,6 @@ a {
     justify-content: center;
     width: 2.5rem;
     height: 2.5rem;
-    margin-left: 0.75rem;
 }
 
 .theme-toggle:hover {
