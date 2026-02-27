@@ -1,9 +1,6 @@
 <svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="phuyu_meta_grad" x1="64" y1="20" x2="64" y2="108" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#3B82F6"/> <stop offset="1" stop-color="#1D4ED8"/> </linearGradient>
-  </defs>
-
-  <path d="M64 20L102.1 42V64L64 42L25.9 64V42L64 20Z" fill="#60A5FA"/> <path d="M64 42L102.1 64V86L64 64L25.9 86V64L64 42Z" fill="url(#phuyu_meta_grad)"/>
-
-  <path d="M64 64L102.1 86V108L64 86L25.9 108V86L64 64Z" fill="#1E40AF"/> </svg>
+  <path d="M30 80L64 95L98 80L64 65L30 80Z" fill="#1E3A8A"/>
+  <path d="M30 60L64 75L98 60L64 45L30 60Z" fill="#2563EB"/>
+  <path d="M30 40L64 55L98 40L64 25L30 40Z" fill="#38BDF8"/>
+  <path d="M30 40V80L64 95V55L30 40Z" fill="black" fill-opacity="0.1"/>
+</svg>
